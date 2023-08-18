@@ -1,0 +1,61 @@
+<h1>hello {{data == 'shaileshh gabu'}} user</h1>
+<h1>hello {{myFun2()}} user</h1>
+<button (click)="getValue(box.value)">click me</button>
+<input type="text" #box placeholder="enter value" [disabled] = disable value="gabu"/>
+<p>show this input value : {{inputVal}}</p>
+<br>
+<button (click)="counter('minus')">--</button>
+<p>{{count}}</p>
+<button (click)="counter('add')">++</button>
+
+<!-- if else condition -->
+
+<span *ngIf="showComponent; then cTrue else cFalse"></span>
+<ng-template #cTrue>
+    <h1 >true condition</h1>
+</ng-template>
+<ng-template #cFalse>
+    <h1 >false condition</h1>
+</ng-template>
+
+<!-- multiple condition -->
+
+<ng-template [ngIf] = "color === 'red'">
+    <h1 style="color:red">red color</h1>
+</ng-template>
+<ng-template [ngIf] = "color === 'green'">
+    <h1 style="color:green">green color</h1>
+</ng-template>
+<ng-template [ngIf] = "color === 'blue'">
+    <h1 style="color:blue">blue color</h1>
+</ng-template>
+<ng-template [ngIf] = "color === 'yellow'">
+    <h1 style="color:yellow">yellow color</h1>
+</ng-template>
+<ng-template [ngIf] = "color === 'black'">
+    <h1 style="color:black">black color</h1>
+</ng-template>
+
+
+<!-- switch case  -->
+   
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase ="'red'" style="color: red;"> switch red color</h1>
+    <h1 *ngSwitchCase ="'green'" style="color: green;"> switch green color</h1>
+    <h1 *ngSwitchCase ="'black'" style="color: black;"> switch black color</h1>
+    <h1 *ngSwitchCase ="'yellow'" style="color: yellow;"> switch yellow color</h1>
+    <h1 *ngSwitchCase ="'blue'" style="color: blue;"> switch blue color</h1>
+    <h1 *ngSwitchDefault> no match color</h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+<app-home></app-home>

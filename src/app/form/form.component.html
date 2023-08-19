@@ -1,0 +1,28 @@
+<h1>this is a product form</h1>
+<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+    <!-- <label for="name">Enter full Name</label><br> -->
+    <input type="text" ngModule name="user" placeholder="Enter Your Name"/>
+    <br><br>
+    <!-- <label for="password">Enter password</label><br> -->
+    <input type="password" ngModule name="password" placeholder="Enter Your password"/>
+    <br><br>
+    <!-- <label for="mobile">Enter mobile</label><br> -->
+    <input type="number" ngModule name="number" placeholder="Enter Your number"/>
+    <br><br>
+    <!-- <label for="mail">Enter Email</label><br> -->
+    <input type="email" ngModule name="email" placeholder="Enter Your mail"/>
+    <br><br>
+    <button>submit</button>
+</form>
+
+<!-- toggle element -->
+
+<button (click)="eleToggle()">click to toggle</button>
+<h1 *ngIf="display">toggle example</h1>
+
+<!-- <ul>
+    <li>{{userData.name}}</li>
+    <li>{{userData.password}}</li>
+    <li>{{userData.number}}</li>
+    <li>{{userData.email}}</li>
+</ul> -->

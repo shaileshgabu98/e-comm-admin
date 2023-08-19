@@ -21,7 +21,7 @@
 <!-- multiple condition -->
 
 <ng-template [ngIf] = "color === 'red'">
-    <h1 style="color:red">red color</h1>
+    <h1 [style.color]=color>{{color}} fdcolor</h1>
 </ng-template>
 <ng-template [ngIf] = "color === 'green'">
     <h1 style="color:green">green color</h1>
@@ -49,7 +49,34 @@
     <h1 *ngSwitchDefault> no match color</h1>
 </div>
 
+<!-- for loops -->
 
+<h3 *ngFor="let item of user">{{item}}</h3>
+<br>
+<h3 *ngFor="let item of userDetails">{{item.name}} -- {{item.mail}} -- {{item.mobile}}</h3>
+
+<!-- nested loop -->
+<ul *ngFor='let user of userData'>
+    <li>name : {{user.name}}</li>
+    <li>mobile : {{user.mobile}}</li>
+    <li>email : {{user.mail}}</li>
+    <li>social media accounts  : </li>
+    <ul *ngFor="let accounts of user.socialAccount">
+        <li>{{accounts}}</li>
+    </ul>
+</ul>
+
+<div style="width: 100%;" [style.backgroundColor]="boxBgColor"><h1 [style.color]=titleBgColor>dynamic background</h1>
+    ,<button (click)="changeColor()" (dblclick)="dblChangeColor()"> change color</button>
+</div>
+
+<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+<input type="text" ngModule name="user" placeholder="enter name"/><br><br>
+<input type="text" ngModule name="password" placeholder="enter password"/><br><br>
+<input type="text" ngModule name="email" placeholder="enter email"/><br><br>
+<br><br>
+<button>register</button>
+</form>
 
 
 
